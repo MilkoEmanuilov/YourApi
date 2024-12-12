@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Milko Emanuilov",
+    "classifications": [
+        "Web",
+        "WebAPI",
+        "Clean Architecture"
+    ],
+    "name": "Clean Architecture API Solution",
+    "identity": "CleanArchitecture.Solution",
+    "shortName": "YourCleanAPI",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "YourApi",
+    "preferNameDirectory": true
+}

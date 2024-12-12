@@ -1,0 +1,24 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
+      - MSSQL_PID=Developer
+    ports:
+      - "${MSSQL_PORT}:1433"
+    volumes:
+      - ./volumes/sqlserver:/var/opt/mssql
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    command: start-dev
+    environment:
+      - KEYCLOAK_ADMIN=${KEYCLOAK_ADMIN}
+      - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD}
+      - KC_DB=mssql
+      - KC_DB_URL=jdbc:sqlserver://${MSSQL_HOST}:1433;databaseName=${MSSQL_DB};encrypt=true;trustServerCertificate=true
+      - KC_DB_USERNAME=sa
+      - KC_DB_PASSWORD=${MSSQL_SA_PASSWORD}
+      - KC_HOSTNAME=localhost
+    ports:
+      - "${KEYCLOAK_PORT}:8080"

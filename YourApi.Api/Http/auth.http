@@ -1,0 +1,25 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+### Register new user
+POST {{host}}/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "email": "test@example.com",
+    "password": "password123"
+}
+
+### Login
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "password": "password123"
+}
+
+### Assign role to user
+POST {{host}}/api/auth/assign-role?userId=123&role=admin
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
