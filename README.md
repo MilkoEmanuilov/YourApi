@@ -47,6 +47,7 @@ This solution follows the Clean Architecture principles, which include:
 - **YourApi.Infrastructure**: Contains the infrastructure code, including Entity Framework Core for data access.
 
 ### Project Structure
+```
 📁 .docker
    ├─🐳 docker-compose.yml (Container orchestration configuration)
    ├─🔒 .env (Environment variables and secrets)
@@ -82,7 +83,7 @@ This solution follows the Clean Architecture principles, which include:
    ├─📁 Migrations
    ├─📁 Persistence
    └─📁 Services
-
+```
 ## Installation
 
 1. Clone the repository:
