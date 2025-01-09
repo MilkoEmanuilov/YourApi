@@ -16,8 +16,8 @@ A modern, clean architecture solution template for building scalable application
 
 - .NET 9 SDK
 - Docker
-- SQL Server ()
-- Keycloak Server (for authentication)
+- SQL Server (2022-latest provided in docker-compose)
+- Keycloak Server (provided in docker-compose)
 
 ### Docker Configuration
 
